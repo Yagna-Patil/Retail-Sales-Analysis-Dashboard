@@ -34,7 +34,26 @@ total_profit = df['Profit'].sum()
 if selected_page == "Dashboard":
     st.markdown("<h1 style='text-align: center;'>Retail Sales Analysis Dashboard</h1>", unsafe_allow_html=True)
     st.markdown("------")
-    st.markdown("<h6 style='text-align: left;'>Welcome to <b><u>Retail Sales Analysis Dashboard</u></b><br><br>This dashboard helps to analyze the sales data.</br></br></h6>", unsafe_allow_html=True)
+    st.markdown(
+        """
+        <div style="
+            background: linear-gradient(135deg, #fff8e8, #f4e5c7);
+            border-left: 6px solid #b7791f;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 8px 0 24px;
+            box-shadow: 0 4px 14px rgba(90, 60, 20, 0.10);
+        ">
+            <p style="margin: 0 0 8px; color: #5b3a13; font-size: 1.25rem; font-weight: 700;">
+                Welcome to <span style="color: #9a5b0a;">Retail Sales Analysis Dashboard</span>
+            </p>
+            <p style="margin: 0; color: #655744; font-size: 1rem; line-height: 1.6;">
+                Explore your sales data and uncover meaningful business insights.
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
     col1, col2 = st.columns(2)
 
