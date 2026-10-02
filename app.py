@@ -32,24 +32,43 @@ total_sales = df['Sales'].sum()
 total_profit = df['Profit'].sum()
 
 if selected_page == "Dashboard":
-    st.markdown("<h1 style='text-align: center;'>Retail Sales Analysis Dashboard</h1>", unsafe_allow_html=True)
+    st.markdown(
+        """
+        <style>
+            .dashboard-title {
+                background: linear-gradient(120deg, #f4e5c7, #fff8e8, #e8c98c, #fff8e8);
+                border-radius: 14px;
+                color: #5b3a13;
+                padding: 18px 12px;
+                text-align: center;
+                font-size: 2rem;
+                font-weight: 750;
+                margin: 0 0 18px;
+            }
+            .dashboard-intro {
+                background: linear-gradient(120deg, #f4e5c7, #fff8e8, #e8c98c, #fff8e8);
+                border-radius: 14px;
+                color: #655744;
+                padding: 18px 12px;
+                text-align: center;
+                line-height: 1.7;
+                margin: 18px 0 24px;
+            }
+            .dashboard-intro strong {
+                color: #9a5b0a;
+                font-size: 1.2rem;
+            }
+        </style>
+        <h1 class="dashboard-title">Retail Sales Analysis Dashboard</h1>
+        """,
+        unsafe_allow_html=True
+    )
     st.markdown("------")
     st.markdown(
         """
-        <div style="
-            background: linear-gradient(135deg, #fff8e8, #f4e5c7);
-            border-left: 6px solid #b7791f;
-            border-radius: 12px;
-            padding: 20px 24px;
-            margin: 8px 0 24px;
-            box-shadow: 0 4px 14px rgba(90, 60, 20, 0.10);
-        ">
-            <p style="margin: 0 0 8px; color: #5b3a13; font-size: 1.25rem; font-weight: 700;">
-                Welcome to <span style="color: #9a5b0a;">Retail Sales Analysis Dashboard</span>
-            </p>
-            <p style="margin: 0; color: #655744; font-size: 1rem; line-height: 1.6;">
-                Explore your sales data and uncover meaningful business insights.
-            </p>
+        <div class="dashboard-intro">
+            <strong>Welcome to Retail Sales Analysis Dashboard</strong><br>
+            This dashboard helps to analyze the sales data.
         </div>
         """,
         unsafe_allow_html=True
